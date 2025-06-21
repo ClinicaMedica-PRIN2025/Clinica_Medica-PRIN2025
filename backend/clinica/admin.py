@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Medico, Especialidade, Paciente
+from .models import Medico, Especialidade, Paciente, Atendente
 
 
-admin.site.register(Medico, Especialidade, Paciente)
+admin.site.register(Medico, Especialidade, Paciente, Atendente)
