@@ -1,6 +1,6 @@
 from rest_framework.viewsets import ModelViewSet
-from .models import Medico, Especialidade, Paciente, Atendente, Sala, Consulta
-from .serializers import MedicoSerializer, EspecialidadeSerializer, PacienteSerializer, AtendenteSerializer, SalaSerializer, ConsultaSerializer
+from .models import Medico, Especialidade, Paciente, Atendente, Sala, Consulta, Exame
+from .serializers import MedicoSerializer, EspecialidadeSerializer, PacienteSerializer, AtendenteSerializer, SalaSerializer, ConsultaSerializer, ExameSerializer
 
 class EspecialidadeViewSet(ModelViewSet):
     queryset = Especialidade.objects.all()
@@ -25,3 +25,7 @@ class SalaViewSet(ModelViewSet):
 class ConsultaViewSet(ModelViewSet):
     queryset = Consulta.objects.all()
     serializer_class = ConsultaSerializer
+
+class ExameViewSet(ModelViewSet):
+    queryset = Consulta.objects.all()
+    serializer_class = ExameSerializer
