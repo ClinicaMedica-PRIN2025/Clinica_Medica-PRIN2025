@@ -1,6 +1,6 @@
 from rest_framework.viewsets import ModelViewSet
-from .models import Medico, Especialidade, Paciente, Atendente, Sala, Consulta, Exame, Fornecedor, Medicamento
-from .serializers import MedicoSerializer, EspecialidadeSerializer, PacienteSerializer, AtendenteSerializer, SalaSerializer, ConsultaSerializer, ExameSerializer, FornecedorSerializer, MedicamentoSerializer
+from .models import Medico, Especialidade, Paciente, Atendente, Sala, Consulta, Exame, Fornecedor, Medicamento, Receita
+from .serializers import MedicoSerializer, EspecialidadeSerializer, PacienteSerializer, AtendenteSerializer, SalaSerializer, ConsultaSerializer, ExameSerializer, FornecedorSerializer, MedicamentoSerializer, ReceitaSerializer
 
 class EspecialidadeViewSet(ModelViewSet):
     queryset = Especialidade.objects.all()
@@ -37,3 +37,7 @@ class FornecedorViewSet(ModelViewSet):
 class MedicamentoViewSet(ModelViewSet):
     queryset = Medicamento.objects.all()
     serializer_class = MedicamentoSerializer
+
+class ReceitaViewSet(ModelViewSet):
+    queryset = Receita.objects.all()
+    serializer_class = ReceitaSerializer
