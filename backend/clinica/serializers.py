@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from .models import Medico, Especialidade, Paciente, Atendente, Sala
+from .models import Medico, Especialidade, Paciente, Atendente, Sala, Consulta
 
 class EspecialidadeSerializer(ModelSerializer):
     class Meta:
@@ -24,4 +24,9 @@ class AtendenteSerializer(ModelSerializer):
 class SalaSerializer(ModelSerializer):
     class Meta:
         model = Sala
+        fields = '__all__'
+
+class ConsultaSerializer(ModelSerializer):
+    class Meta:
+        model = Consulta
         fields = '__all__'
